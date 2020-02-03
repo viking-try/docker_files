@@ -1,0 +1,24 @@
+version: '3'
+services:
+  jenkins-ans:
+     container_name: targetansible 
+     image: targeransible
+     build:
+        context: ansibletarget 
+     ports: 
+      - 8089:80
+     #deploy:
+      #mode: replicated
+      #replicas: 3
+  jenkins-ans2:
+     container_name: targetansible2 
+     image: targeransible
+     ports:
+      - 8090:80
+
+  jenkins-ans3:
+     container_name: targetansible3
+     image: targeransible
+     ports:
+      - 8091:80
+
